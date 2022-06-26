@@ -9,6 +9,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'python test.py'
+        sh 'pip install Flask --upgrade'
       }
       post {
         always {
